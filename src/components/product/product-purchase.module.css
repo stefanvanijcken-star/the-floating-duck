@@ -1,0 +1,48 @@
+.purchase { width: 100%; max-width: 525px; display: flex; flex-direction: column; gap: 36px; }
+.configuration { display: flex; flex-direction: column; gap: 30px; }
+.intro { display: flex; flex-direction: column; gap: 20px; }
+.purchase h1 { font-family: var(--font-cooper); font-size: clamp(34px, 3vw, 40px); line-height: 1.15; text-wrap: balance; }
+.pricing { display: flex; flex-direction: column; gap: 7px; }
+.price { font-size: 16px; }
+.tax { color: var(--gray); font-size: 13px; line-height: 1.45; }
+.options { display: flex; flex-direction: column; gap: 28px; }
+.option { display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
+.label { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.label a { text-decoration: underline; text-underline-offset: 3px; }
+.sizes { display: flex; flex-wrap: wrap; gap: 10px; }
+.sizes button { width: 40px; height: 40px; color: var(--gray); border: 1px solid var(--gray); background: transparent; cursor: pointer; transition: color .2s ease, background-color .2s ease, border-color .2s ease; }
+.sizes button:hover { border-color: var(--navy); color: var(--navy); }
+.sizes button[aria-pressed="true"] { border-color: var(--navy); background: var(--navy); color: var(--ivory); }
+.colors { display: flex; flex-wrap: wrap; gap: 12px; padding: 3px; }
+.colors button { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(14,35,64,.16); cursor: pointer; }
+.colors button[aria-pressed="true"] { outline: 2px solid var(--navy); outline-offset: 3px; }
+.checkout { display: flex; flex-direction: column; gap: 16px; }
+.buy { display: flex; flex-direction: column; gap: 8px; }
+.buy button { min-height: 50px; border: 1px solid var(--navy); background: var(--navy); color: var(--ivory); cursor: pointer; transition: color .2s ease, background-color .2s ease; }
+.buy button:hover { background: transparent; color: var(--navy); }
+.buy button:last-child { background: transparent; color: var(--navy); }
+.buy button:last-child:hover { background: var(--navy); color: var(--ivory); }
+.buy button:disabled, .buy button:disabled:hover { border-color: var(--light-gray); background: var(--light-gray); color: var(--white); cursor: not-allowed; }
+.buy button:last-child:disabled, .buy button:last-child:disabled:hover { border-color: var(--light-gray); background: transparent; color: var(--gray); }
+.stock { display: flex; gap: 10px; align-items: center; font-size: 14px; line-height: 1.4; }
+.stock svg { flex: 0 0 auto; }
+.details { border-top: 1px solid var(--line); }
+.detail { border-bottom: 1px solid var(--line); }
+.detail > button { width: 100%; min-height: 58px; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; border: 0; background: none; color: inherit; cursor: pointer; text-align: left; }
+.detail > button span { display: flex; gap: 11px; align-items: center; }
+.detail > button svg { flex: 0 0 auto; }
+.detailContent { padding: 0 0 20px 31px; color: var(--gray); font-size: 13px; line-height: 1.6; }
+.detailContent ul { display: flex; flex-direction: column; gap: 8px; padding-left: 17px; }
+
+@media (max-width: 1050px) {
+  .purchase { max-width: none; }
+}
+@media (max-width: 700px) {
+  .purchase { gap: 30px; }
+  .purchase h1 { font-size: clamp(30px, 9vw, 35px); }
+  .configuration { gap: 26px; }
+  .options { gap: 24px; }
+  .buy button { min-height: 52px; }
+  .stock { font-size: 13px; }
+  .detailContent { padding-left: 26px; }
+}

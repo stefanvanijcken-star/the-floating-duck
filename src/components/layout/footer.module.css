@@ -1,0 +1,42 @@
+.footer { color: var(--ivory); background: var(--navy); }
+.top { display: flex; justify-content: space-between; align-items: flex-start; padding: 48px 48px 32px; gap: 64px; }
+.newsletter { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; min-width: 430px; }
+.newsletter img { width: 96px; height: auto; }
+.newsletter h2, .columns h2 { font-family: var(--font-cooper); font-size: 19px; line-height: 1.2; margin-bottom: 8px; }
+.newsletter p, .columns a { font-size: 14px; line-height: 1.4; }
+.form { display: flex; width: 100%; gap: 12px; }
+.form input { min-width: 0; flex: 1; appearance: none; border: 1px solid var(--ivory); border-radius: 0; outline: 0; background: transparent; color: inherit; padding: 12px 18px; font: inherit; }
+.form input:focus { border-radius: 0; box-shadow: none; }
+.form input:focus-visible { outline: 1px solid var(--ivory); outline-offset: 2px; }
+.form input::placeholder { color: var(--ivory); }
+.form button { border: 1px solid var(--ivory); background: var(--ivory); color: var(--navy); padding: 12px 22px; font: inherit; cursor: pointer; transition: color .2s ease, background-color .2s ease; }
+.form button:hover { background: transparent; color: var(--ivory); }
+.columns { display: flex; gap: clamp(28px, 3.2vw, 48px); }
+.columns section { display: flex; flex-direction: column; gap: 10px; white-space: nowrap; }
+.columns section h2 { margin-bottom: 4px; }
+.columns a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.bottom { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 48px 48px; font-size: 13px; font-weight: 600; }
+.currency { display: flex; align-items: center; gap: 8px; }
+
+@media (max-width: 1100px) {
+  .top { flex-direction: column; gap: 44px; }
+  .newsletter { min-width: 0; width: min(100%, 620px); }
+  .columns { width: 100%; justify-content: space-between; }
+}
+@media (max-width: 700px) {
+  .top { padding: 40px 20px 32px; gap: 40px; }
+  .newsletter { gap: 18px; }
+  .newsletter img { width: 82px; }
+  .newsletter h2, .columns h2 { font-size: 18px; }
+  .newsletter p, .columns a { font-size: 13px; }
+  .columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 20px; }
+  .columns section { white-space: normal; }
+  .form { flex-direction: column; gap: 10px; }
+  .form input, .form button { min-height: 46px; width: 100%; }
+  .bottom { grid-template-columns: 1fr; gap: 18px; padding: 0 20px 32px; font-size: 12px; }
+  .bottom > span:last-child { display: none; }
+}
+@media (max-width: 360px) {
+  .top, .bottom { padding-inline: 16px; }
+  .columns { gap-inline: 14px; }
+}

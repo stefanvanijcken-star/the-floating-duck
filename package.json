@@ -6,12 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cms:generate-types": "payload generate:types",
+    "cms:generate-importmap": "payload generate:importmap",
+    "cms:migrate": "payload migrate",
+    "cms:seed": "payload run src/scripts/seed.ts"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "^3.86.0",
+    "@payloadcms/next": "^3.86.0",
+    "@payloadcms/richtext-lexical": "^3.86.0",
+    "lucide-react": "^1.25.0",
     "next": "16.2.10",
+    "payload": "^3.86.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sharp": "^0.35.3",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -20,5 +31,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }

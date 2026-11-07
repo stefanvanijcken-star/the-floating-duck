@@ -1,0 +1,18 @@
+.card { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.imageWrap { position: relative; display: block; width: 100%; aspect-ratio: 432 / 540; overflow: hidden; background: #f5f2ec; }
+.imageWrap img { object-fit: cover; transition: opacity .35s ease, transform .45s ease; }
+.hoverImage { opacity: 0; }
+@media (hover: hover) {
+  .card:hover .imageWrap img { transform: scale(1.015); }
+  .card:hover .primaryImage { opacity: 0; }
+  .card:hover .hoverImage { opacity: 1; }
+}
+.details { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 20px 10px 24px; color: var(--navy); font-size: 13px; line-height: 1.35; text-align: center; }
+.details a { font-size: 15px; font-weight: 600; text-wrap: balance; }
+@media (max-width: 700px) {
+  .details { gap: 5px; padding: 12px 2px 20px; font-size: 11px; }
+  .details a { font-size: 12px; line-height: 1.35; }
+}
+@media (max-width: 380px) {
+  .details a { font-size: 11px; }
+}
